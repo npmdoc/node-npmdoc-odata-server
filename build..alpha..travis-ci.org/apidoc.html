@@ -1,0 +1,1047 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="http://jaydata.org"
+
+    >odata-server (v1.3.7)</a>
+</h1>
+<h4>JayData Server</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.odata-server">module odata-server</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.odata-server.odata-server">
+            function <span class="apidocSignatureSpan"></span>odata-server
+            <span class="apidocSignatureSpan">(type, db)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.odata-server.context">
+            function <span class="apidocSignatureSpan">odata-server.</span>context
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.odata-server.toString">
+            function <span class="apidocSignatureSpan">odata-server.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">odata-server.</span>context.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.odata-server.context">module odata-server.context</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">odata-server.context.</span>__class</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.odata-server.context.context">
+            function <span class="apidocSignatureSpan">odata-server.</span>context
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.odata-server.context._convertLogicalTypeNameToPhysical">
+            function <span class="apidocSignatureSpan">odata-server.context.</span>_convertLogicalTypeNameToPhysical
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.odata-server.context.addMember">
+            function <span class="apidocSignatureSpan">odata-server.context.</span>addMember
+            <span class="apidocSignatureSpan">(name, definition, isClassMember)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.odata-server.context.addProperty">
+            function <span class="apidocSignatureSpan">odata-server.context.</span>addProperty
+            <span class="apidocSignatureSpan">(name, getterOrType, setterOrGetter, setter)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.odata-server.context.create">
+            function <span class="apidocSignatureSpan">odata-server.context.</span>create
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.odata-server.context.describeField">
+            function <span class="apidocSignatureSpan">odata-server.context.</span>describeField
+            <span class="apidocSignatureSpan">(name, definition)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.odata-server.context.extend">
+            function <span class="apidocSignatureSpan">odata-server.context.</span>extend
+            <span class="apidocSignatureSpan">(name, container, instanceDefinition, classDefinition)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.odata-server.context.generateServiceOperation">
+            function <span class="apidocSignatureSpan">odata-server.context.</span>generateServiceOperation
+            <span class="apidocSignatureSpan">(cfg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.odata-server.context.generateTestData">
+            function <span class="apidocSignatureSpan">odata-server.context.</span>generateTestData
+            <span class="apidocSignatureSpan">(context, callBack)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.odata-server.context.getMemberDefinition">
+            function <span class="apidocSignatureSpan">odata-server.context.</span>getMemberDefinition
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.odata-server.context.inheritedTypeProcessor">
+            function <span class="apidocSignatureSpan">odata-server.context.</span>inheritedTypeProcessor
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.odata-server.context.inheritsFrom">
+            function <span class="apidocSignatureSpan">odata-server.context.</span>inheritsFrom
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.odata-server.context.resolveForwardDeclarations">
+            function <span class="apidocSignatureSpan">odata-server.context.</span>resolveForwardDeclarations
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.odata-server.context.retrieveProperty">
+            function <span class="apidocSignatureSpan">odata-server.context.</span>retrieveProperty
+            <span class="apidocSignatureSpan">(memberDefinition)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.odata-server.context.storeProperty">
+            function <span class="apidocSignatureSpan">odata-server.context.</span>storeProperty
+            <span class="apidocSignatureSpan">(memberDefinition, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">odata-server.context.</span>__storageModelCache</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">odata-server.context.</span>_storageModelCache</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">odata-server.context.</span>baseTypes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">odata-server.context.</span>childResolverThunks</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">odata-server.context.</span>container</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">odata-server.context.</span>memberDefinitions</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">odata-server.context.</span>resolverThunks</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">odata-server.context.</span>staticDefinitions</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">odata-server.context.</span>fullName</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">odata-server.context.</span>namespace</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.odata-server.context.prototype">module odata-server.context.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.odata-server.context.prototype.constructor">
+            function <span class="apidocSignatureSpan">odata-server.context.prototype.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.odata-server.toString">module odata-server.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.odata-server.toString.toString">
+            function <span class="apidocSignatureSpan">odata-server.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.odata-server" id="apidoc.module.odata-server">module odata-server</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.odata-server.odata-server" id="apidoc.element.odata-server.odata-server">
+        function <span class="apidocSignatureSpan"></span>odata-server
+        <span class="apidocSignatureSpan">(type, db)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">odata-server = function (type, db){
+    var connect = require(&#x27;connect&#x27;);
+    var basicAuth = require(&#x27;basic-auth-connect&#x27;);
+    var domain = require(&#x27;domain&#x27;);
+
+    var config = typeof type === &#x27;object&#x27; ? type : {};
+    var type = config.type || type;
+    config.database = config.database || db || type.name;
+    if (!config.provider) config.provider = {};
+    config.provider.name = config.provider.name || &#x27;mongoDB&#x27;;
+    config.provider.databaseName = config.provider.databaseName || config.database || db || type.name;
+    config.provider.responseLimit = config.provider.responseLimit || config.responseLimit || 100;
+    config.provider.user = config.provider.user || config.user;
+    config.provider.checkPermission = config.provider.checkPermission || config.checkPermission;
+
+    var serviceType = $data.Class.defineEx(type.fullName + &#x27;.Service&#x27;, [type, $data.ServiceBase]);
+    serviceType.annotateFromVSDoc();
+
+    var basicAuthFn = function(req, res, next){
+        if (!config.basicAuth &#x26;&#x26; !config.rootAuth) return next();
+        var callback = config.rootAuth ? function(){ basicAuth(config.rootAuth)(req, res, next); } : next;
+        if (typeof config.basicAuth == &#x27;function&#x27;){
+            basicAuth(config.basicAuth)(req, res, callback);
+        }else if (typeof config.basicAuth == &#x27;object&#x27; &#x26;&#x26; config.basicAuth.username &#x26;&#x26; config.basicAuth.password){
+            basicAuth(config.basicAuth.username, config.basicAuth.password)(req, res, callback);
+        }else callback();
+    };
+
+    var corsFn = function(req, res, next){
+        if (config.CORS !== false){
+            res.setHeader(&#x27;Access-Control-Allow-Origin&#x27;, &#x27;*&#x27;);
+            res.setHeader(&#x27;Access-Control-Allow-Headers&#x27;, &#x27;X-PINGOTHER, Content-Type, MaxDataServiceVersion, DataServiceVersion,
+Authorization&#x27;);
+            res.setHeader(&#x27;Access-Control-Allow-Methods&#x27;, &#x27;POST, GET, OPTIONS, PUT, MERGE, PATCH, DELETE&#x27;);
+            if (req.method === &#x27;OPTIONS&#x27;){
+                res.setHeader(&#x27;Access-Control-Max-Age&#x27;, &#x27;31536000&#x27;);
+                res.setHeader(&#x27;Cache-Control&#x27;, &#x27;max-age=31536000&#x27;);
+                res.end();
+            }else{
+                next();
+            }
+        }else next();
+    };
+
+    var qs = require(&#x27;qs&#x27;);
+    var queryFn = function(req, res, next){
+        if (!req.query){
+            req.query = qs.parse(req._parsedUrl.query);
+            next();
+        }else next();
+    };
+
+    var bodyParser = require(&#x27;body-parser&#x27;);
+    var bodyFn = function(req, res, next){
+        if (!req.body){
+            bodyParser()(req, res, next);
+        }else next();
+    };
+
+    var simpleBodyFn = function(req, res, next){
+        $data.JayService.OData.Utils.simpleBodyReader()(req, res, next);
+    };
+
+    var errorFn = function(req, res, next, callback){
+        var reqd = domain.create();
+        reqd.add(req);
+        reqd.add(res);
+        reqd.add(next);
+        reqd.on(&#x27;error&#x27;, function(err){
+            try{
+                console.error(err);
+                next(err);
+            }catch (derr){
+                console.error(&#x27;Error sending 500&#x27;, derr, req.url);
+                reqd.dispose();
+            }
+        });
+        reqd.run(function(){
+            callback();
+        });
+    };
+
+    var errorHandler = require(&#x27;errorhandler&#x27;);
+    var errorHandlerFn = function(err, req, res, next){
+        if (config.errorHandler){
+            errorHandler.title = typeof config.errorHandler == &#x27;string&#x27; ?  config.errorHandler : config.provider.databaseName;
+            errorHandler()(err, req, res, next);
+        }else next(err);
+    };
+
+    return function(req, res, next){
+        var self = this;
+
+        if (config.provider.checkPermission){
+            Object.defineProperty(req, &#x27;checkPermission&#x27;, {
+                value: config.provider.checkPermission.bind(req),
+                enumerable: true
+            });
+            config.provider.checkPermission = req.checkPermission;
+        }
+
+        var schema = &#x27;http&#x27;;
+        if (req &#x26;&#x26; req.heade ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.odata-server.context" id="apidoc.element.odata-server.context">
+        function <span class="apidocSignatureSpan">odata-server.</span>context
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function NewsContext(){
+    //mixins
+
+    //construction
+    var baseArguments = $data.typeSystem.createCtorParams(arguments, base[0].params, this);
+    $data.EntityContext.apply(this, baseArguments);
+
+    //propagations
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.odata-server.toString" id="apidoc.element.odata-server.toString">
+        function <span class="apidocSignatureSpan">odata-server.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.odata-server.context" id="apidoc.module.odata-server.context">module odata-server.context</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.odata-server.context.context" id="apidoc.element.odata-server.context.context">
+        function <span class="apidocSignatureSpan">odata-server.</span>context
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function NewsContext(){
+    //mixins
+
+    //construction
+    var baseArguments = $data.typeSystem.createCtorParams(arguments, base[0].params, this);
+    $data.EntityContext.apply(this, baseArguments);
+
+    //propagations
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.odata-server.context._convertLogicalTypeNameToPhysical" id="apidoc.element.odata-server.context._convertLogicalTypeNameToPhysical">
+        function <span class="apidocSignatureSpan">odata-server.context.</span>_convertLogicalTypeNameToPhysical
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_convertLogicalTypeNameToPhysical = function (name) {
+    return name + &#x27;_$db$&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.odata-server.context.addMember" id="apidoc.element.odata-server.context.addMember">
+        function <span class="apidocSignatureSpan">odata-server.context.</span>addMember
+        <span class="apidocSignatureSpan">(name, definition, isClassMember)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addMember = function (name, definition, isClassMember) {
+    var memberDefinition = MemberDefinition.translateDefinition(definition, name, this);
+
+    if (isClassMember) {
+        memberDefinition.classMember = true;
+        $data.Class.buildMember(this, memberDefinition, undefined, &#x27;staticDefinitions&#x27;);
+        this.staticDefinitions.clearCache();
+    } else {
+        $data.Class.buildMember(this, memberDefinition);
+        this.memberDefinitions.clearCache();
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.odata-server.context.addProperty" id="apidoc.element.odata-server.context.addProperty">
+        function <span class="apidocSignatureSpan">odata-server.context.</span>addProperty
+        <span class="apidocSignatureSpan">(name, getterOrType, setterOrGetter, setter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addProperty = function (name, getterOrType, setterOrGetter, setter) {
+    var _getter = getterOrType;
+    var _setter = setterOrGetter;
+    var _type;
+    if (typeof _getter === &#x27;string&#x27;) {
+        _type = getterOrType;
+        _getter = setterOrGetter;
+        _setter = setter;
+    }
+
+    var propDef = {
+        notMapped: true,
+        storeOnObject: true,
+        get: typeof _getter === &#x27;function&#x27; ? _getter : function () { },
+        set: typeof _setter === &#x27;function&#x27; ? _setter : function () { },
+        type: _type
+    };
+
+    var memberDefinition = MemberDefinition.translateDefinition(propDef, name, this);
+    $data.Class.buildMember(this, memberDefinition);
+
+    this.memberDefinitions.clearCache();
+
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.odata-server.context.create" id="apidoc.element.odata-server.context.create">
+        function <span class="apidocSignatureSpan">odata-server.context.</span>create
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function () { return Container.createInstance(this, arguments); }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+var simpleBodyFn = function(req, res, next){
+    $data.JayService.OData.Utils.simpleBodyReader()(req, res, next);
+};
+
+var errorFn = function(req, res, next, callback){
+    var reqd = domain.<span class="apidocCodeKeywordSpan">create</span>();
+    reqd.add(req);
+    reqd.add(res);
+    reqd.add(next);
+    reqd.on(&#x27;error&#x27;, function(err){
+        try{
+            console.error(err);
+            next(err);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.odata-server.context.describeField" id="apidoc.element.odata-server.context.describeField">
+        function <span class="apidocSignatureSpan">odata-server.context.</span>describeField
+        <span class="apidocSignatureSpan">(name, definition)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">describeField = function (name, definition) {
+    var memDef = this.memberDefinitions.getMember(name);
+    if (!memDef) {
+        this.addMember(name, definition);
+    } else {
+        Guard.raise(new Exception(&#x22;Field &#x27;&#x22; + name + &#x22;&#x27; already defined!&#x22;, &#x22;Invalid operation&#x22;));
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.odata-server.context.extend" id="apidoc.element.odata-server.context.extend">
+        function <span class="apidocSignatureSpan">odata-server.context.</span>extend
+        <span class="apidocSignatureSpan">(name, container, instanceDefinition, classDefinition)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extend = function (name, container, instanceDefinition, classDefinition) {
+    if (container &#x26;&#x26; !(container instanceof ContainerCtor)) {
+        classDefinition = instanceDefinition;
+        instanceDefinition = container;
+        container = undefined;
+    }
+    return $data.Class.define(name, this, container, instanceDefinition, classDefinition);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.odata-server.context.generateServiceOperation" id="apidoc.element.odata-server.context.generateServiceOperation">
+        function <span class="apidocSignatureSpan">odata-server.context.</span>generateServiceOperation
+        <span class="apidocSignatureSpan">(cfg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generateServiceOperation = function (cfg) {
+
+    var fn;
+    if (cfg.serviceMethod) {
+        var returnType = cfg.returnType ? Container.resolveType(cfg.returnType) : {};
+        if (returnType.isAssignableTo &#x26;&#x26; returnType.isAssignableTo($data.Queryable)) {
+            fn = cfg.serviceMethod;
+        } else {
+            fn = function () {
+                var lastParam = arguments[arguments.length - 1];
+
+                var pHandler = new $data.PromiseHandler();
+                var cbWrapper;
+
+                var args = arguments;
+                if (typeof lastParam === &#x27;function&#x27;) {
+                    cbWrapper = pHandler.createCallback(lastParam);
+                    arguments[arguments.length - 1] = cbWrapper;
+                } else {
+                    cbWrapper = pHandler.createCallback();
+                    arguments.push(cbWrapper);
+                }
+
+                try {
+                    var result = cfg.serviceMethod.apply(this, arguments);
+                    if (result !== undefined)
+                        cbWrapper.success(result);
+                } catch (e) {
+                    cbWrapper.error(e);
+                }
+
+                return pHandler.getPromise();
+            }
+        }
+
+    } else {
+        fn = function () {
+            var context = this;
+
+            var boundItem;
+            if (this instanceof $data.Entity) {
+                if (!cfg.method) {
+                    cfg.method = &#x27;POST&#x27;;
+                }
+
+                if (this.context) {
+                    context = this.context;
+                } else {
+                    Guard.raise(&#x27;entity not attached into context&#x27;);
+                    return;
+                }
+
+                boundItem = {
+                    data: this,
+                    entitySet: context.getEntitySetFromElementType(this.getType())
+                };
+            }
+
+            var virtualEntitySet = cfg.elementType ? context.getEntitySetFromElementType(Container.resolveType(cfg.elementType)) :
+null;
+
+            var paramConstExpression = null;
+            if (cfg.params) {
+                paramConstExpression = [];
+                for (var i = 0; i &#x3c; cfg.params.length; i++) {
+                    //TODO: check params type
+                    for (var name in cfg.params[i]) {
+                        paramConstExpression.push(Container.createConstantExpression(arguments[i], Container.resolveType(cfg.params
+[i][name]), name));
+                    }
+                }
+            }
+
+            var ec = Container.createEntityContextExpression(context);
+            var memberdef = (boundItem ? boundItem.data : context).getType().getMemberDefinition(cfg.serviceName);
+            var es = Container.createServiceOperationExpression(ec,
+                    Container.createMemberInfoExpression(memberdef),
+                    paramConstExpression,
+                    cfg,
+                    boundItem);
+
+            //Get callback function
+            var clb = arguments[arguments.length - 1];
+            if (typeof clb !== &#x27;function&#x27;) {
+                clb = undefined;
+            }
+
+            if (virtualEntitySet) {
+                var q = Container.createQueryable(virtualEntitySet, es);
+                if (clb) {
+                    es.isTerminated = true;
+                    return q._runQuery(clb);
+                }
+                return q;
+            }
+            else {
+                var returnType = cfg.returnType ? Container.resolveType(cfg.returnType) : null;
+
+                var q = Container.createQueryable(context, es);
+                q.defaultType = returnType || $data.Object;
+
+                if (returnType === $data.Queryable) {
+                    q.defaultType = Container.resolveType(cfg.elementType);
+                    if (clb) {
+                        es.isTerminated = true;
+                        return q._runQuery(clb);
+                    }
+                    return q;
+                }
+                es.isTerminated = true;
+                return q._runQuery(clb);
+            }
+        };
+    };
+
+    var params = [];
+    if (cfg.params) { ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.odata-server.context.generateTestData" id="apidoc.element.odata-server.context.generateTestData">
+        function <span class="apidocSignatureSpan">odata-server.context.</span>generateTestData
+        <span class="apidocSignatureSpan">(context, callBack)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generateTestData = function (context, callBack) {
+    var usr1 = new $news.Types.User({ LoginName: &#x22;Usr1&#x22;, Email: &#x22;usr1@company.com&#x22;, Profile: new $news.Types.UserProfile({ FullName
+: &#x22;Full Name&#x22;, Bio: &#x22;Bio1&#x22;, Birthday: new Date(Date.parse(&#x22;1975/01/01&#x22;)), Location: new $news.Types.Location({ Zip: 2840, City: &#x27;
+City1&#x27;, Address: &#x27;Address6&#x27;, Country: &#x27;Country1&#x27; }) }) });
+    var usr2 = new $news.Types.User({ LoginName: &#x22;Usr2&#x22;, Email: &#x22;usr2@company.com&#x22;, Profile: new $news.Types.UserProfile({ FullName
+: &#x22;Full Name&#x22;, Bio: &#x22;Bio2&#x22;, Birthday: new Date(Date.parse(&#x22;1976/02/01&#x22;)), Location: new $news.Types.Location({ Zip: 1117, City: &#x27;
+City2&#x27;, Address: &#x27;Address7&#x27;, Country: &#x27;Country2&#x27; }) }) });
+    var usr3 = new $news.Types.User({ LoginName: &#x22;Usr3&#x22;, Email: &#x22;usr3@company.com&#x22;, Profile: new $news.Types.UserProfile({ FullName
+: &#x22;Full Name1&#x22;, Bio: &#x22;Bio3&#x22;, Birthday: new Date(Date.parse(&#x22;1977/03/01&#x22;)), Location: new $news.Types.Location({ Zip: 1115, City: &#x27;
+City3&#x27;, Address: &#x27;Address8&#x27;, Country: &#x27;Country3&#x27; }) }) });
+    var usr4 = new $news.Types.User({ LoginName: &#x22;Usr4&#x22;, Email: &#x22;usr4@company.com&#x22;, Profile: new $news.Types.UserProfile({ FullName
+: &#x22;Full Name1&#x22;, Bio: &#x22;Bio4&#x22;, Birthday: new Date(Date.parse(&#x22;1978/04/01&#x22;)), Location: new $news.Types.Location({ Zip: 1211, City: &#x27;
+City4&#x27;, Address: &#x27;Address9&#x27;, Country: &#x27;Country4&#x27; }) }) });
+    var usr5 = new $news.Types.User({ LoginName: &#x22;Usr5&#x22;, Email: &#x22;usr5@company.com&#x22;, Profile: new $news.Types.UserProfile({ FullName
+: &#x22;Full Name2&#x22;, Bio: &#x22;Bio5&#x22;, Birthday: new Date(Date.parse(&#x22;1979/05/01&#x22;)), Location: new $news.Types.Location({ Zip: 3451, City: &#x27;
+City5&#x27;, Address: &#x27;Address0&#x27;, Country: &#x27;Country5&#x27; }) }) });
+    var usr6 = new $news.Types.User({ LoginName: &#x22;StartsWithTest&#x22;, Email: &#x22;swt@company.com&#x22;, Profile: new $news.Types.UserProfile
+({ FullName: &#x22;Starts With Test&#x22;, Bio: &#x22;Bio6&#x22;, Birthday: new Date(Date.parse(&#x22;1980/06/01&#x22;)), Location: new $news.Types.Location({
+Zip: 8475, City: &#x27;City6&#x27;, Address: &#x27;Address7&#x27;, Country: &#x27;Country8&#x27; }) }) });
+    var cat1 = new $news.Types.Category({ Title: &#x22;Sport&#x22; });
+    var cat2 = new $news.Types.Category({ Title: &#x22;World&#x22; });
+    var cat3 = new $news.Types.Category({ Title: &#x22;Politics&#x22; });
+    var cat4 = new $news.Types.Category({ Title: &#x22;Tech&#x22; });
+    var cat5 = new $news.Types.Category({ Title: &#x22;Health&#x22; });
+    var tag1 = new $news.Types.Tag({ Title: &#x22;Tag1&#x22; });
+    var tag2 = new $news.Types.Tag({ Title: &#x22;Tag2&#x22; });
+    var tag3 = new $news.Types.Tag({ Title: &#x22;Tag3&#x22; });
+    var tag4 = new $news.Types.Tag({ Title: &#x22;Tag4&#x22; });
+    var tag5 = new $news.Types.Tag({ Title: &#x22;Tag5&#x22; });
+    context.Tags.add(tag4);
+    context.Tags.add(tag5);
+
+    context.Articles.add(new $news.Types.Article({Title: &#x22;Article1&#x22;, Lead: &#x22;Lead1&#x22;, Body: &#x22;Body1&#x22;, CreateDate: new Date(), Category
+: cat1, Author: usr1, Reviewer: usr6, Tags: [new $news.Types.TagConnection({ Tag: tag1 }), new $news.Types.TagConnection({ Tag:
+tag2 })] }));
+    context.Articles.add(new $news.Types.Article({Title: &#x22;Article2&#x22;, Lead: &#x22;Lead2&#x22;, Body: &#x22;Body2&#x22;, CreateDate: new Date(), Category
+: cat1, Author: usr2, Reviewer: usr5, Tags: [new $news.Types.TagConnection({ Tag: tag2 }), new $news.Types.TagConnection({ Tag:
+tag3 })] }));
+    context.Articles.add(new $news.Types.Article({Title: &#x22;Article3&#x22;, Lead: &#x22;Lead3&#x22;, Body: &#x22;Body3&#x22;, CreateDate: new Date(), Category
+: cat1, Author: usr3, Reviewer: usr4, Tags: [new $news.Types.TagConnection({ Tag: tag3 }), new $news.Types.TagConnection({ Tag:
+tag1 })] }));
+    context.Articles.add(new $news.Types.Article({Title: &#x22;Article4&#x22;, Lead: &#x22;Lead4&#x22;, Body: &#x22;Body4&#x22;, CreateDate: new Date(), Category
+: cat1, Author: usr4, Reviewer: usr3, Tags: [new $news.Types.TagConnection({ Tag: tag1 }), new $news.Types.TagConnection({ Tag:
+tag2 })] }));
+    context.Articles.add(new $news.Types.Article({Title: &#x22;Article5&#x22;, Lead: &#x22;Lead5&#x22;, Body: &#x22;Body5&#x22;, CreateDate: new Date(), Category
+: cat1, Author: usr5, Reviewer: usr2, Tags: [new $news.Types.TagConnection({ Tag: tag2 }), new $news.Types.TagConnection({ Tag:
+tag3 })] }));
+
+    context.Articles.add(new $news.Types.Article({Title: &#x22;Article21&#x22;, Lead: &#x22;Lead21&#x22;, Bod ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+require(&#x27;odata-server&#x27;);
+
+var contextType = require(&#x27;./newsreader/context.js&#x27;);
+var context = new $news.Types.NewsContext({ name: &#x27;mongoDB&#x27;, databaseName: &#x27;newsreader&#x27;, dbCreation: $data.storageProviders
+.DbCreationType.DropAllExistingTables });
+context.onReady(function(db){
+    contextType.<span class="apidocCodeKeywordSpan">generateTestData</span>(db, function(count){
+console.log(&#x27;Test data upload successful. &#x27;, count, &#x27;items inserted.&#x27;);
+console.log(&#x27;Starting NewsReader OData server.&#x27;);
+
+/*$data.createODataServer({
+    type: contextType,
+    database: &#x27;newsreader&#x27;,
+}, &#x27;/newsreader.svc&#x27;, 52999, &#x27;localhost&#x27;);*/
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.odata-server.context.getMemberDefinition" id="apidoc.element.odata-server.context.getMemberDefinition">
+        function <span class="apidocSignatureSpan">odata-server.context.</span>getMemberDefinition
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getMemberDefinition = function (name) {
+    return this.memberDefinitions.getMember(name);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.odata-server.context.inheritedTypeProcessor" id="apidoc.element.odata-server.context.inheritedTypeProcessor">
+        function <span class="apidocSignatureSpan">odata-server.context.</span>inheritedTypeProcessor
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inheritedTypeProcessor = function (type) {
+    if (type.resolveForwardDeclarations) {
+        type.resolveForwardDeclarations();
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.odata-server.context.inheritsFrom" id="apidoc.element.odata-server.context.inheritsFrom">
+        function <span class="apidocSignatureSpan">odata-server.context.</span>inheritsFrom
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EntityContext(){
+    //mixins
+
+    //construction
+    instanceDefinition.constructor.apply(this, arguments);
+
+    //propagations
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.odata-server.context.resolveForwardDeclarations" id="apidoc.element.odata-server.context.resolveForwardDeclarations">
+        function <span class="apidocSignatureSpan">odata-server.context.</span>resolveForwardDeclarations
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resolveForwardDeclarations = function () { }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.odata-server.context.retrieveProperty" id="apidoc.element.odata-server.context.retrieveProperty">
+        function <span class="apidocSignatureSpan">odata-server.context.</span>retrieveProperty
+        <span class="apidocSignatureSpan">(memberDefinition)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">retrieveProperty = function (memberDefinition) {
+    var backingFieldName = &#x22;_&#x22; + memberDefinition.name;
+    return this[backingFieldName];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.odata-server.context.storeProperty" id="apidoc.element.odata-server.context.storeProperty">
+        function <span class="apidocSignatureSpan">odata-server.context.</span>storeProperty
+        <span class="apidocSignatureSpan">(memberDefinition, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">storeProperty = function (memberDefinition, value) {
+    var backingFieldName = &#x22;_&#x22; + memberDefinition.name;
+    if (!this[backingFieldName]) {
+        Object.defineProperty(this, backingFieldName, memberDefinition.createStorePropertyDescriptor(value));
+    }
+    else {
+        this[backingFieldName] = value;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.odata-server.context.prototype" id="apidoc.module.odata-server.context.prototype">module odata-server.context.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.odata-server.context.prototype.constructor" id="apidoc.element.odata-server.context.prototype.constructor">
+        function <span class="apidocSignatureSpan">odata-server.context.prototype.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function NewsContext(){
+    //mixins
+
+    //construction
+    var baseArguments = $data.typeSystem.createCtorParams(arguments, base[0].params, this);
+    $data.EntityContext.apply(this, baseArguments);
+
+    //propagations
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.odata-server.toString" id="apidoc.module.odata-server.toString">module odata-server.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.odata-server.toString.toString" id="apidoc.element.odata-server.toString.toString">
+        function <span class="apidocSignatureSpan">odata-server.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
