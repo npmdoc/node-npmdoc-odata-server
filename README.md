@@ -1,4 +1,7 @@
-# api documentation for  [odata-server (v1.3.7)](http://jaydata.org)  [![npm package](https://img.shields.io/npm/v/npmdoc-odata-server.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-odata-server) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-odata-server.svg)](https://travis-ci.org/npmdoc/node-npmdoc-odata-server)
+# npmdoc-odata-server
+
+#### api documentation for  [odata-server (v1.3.7)](http://jaydata.org)  [![npm package](https://img.shields.io/npm/v/npmdoc-odata-server.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-odata-server) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-odata-server.svg)](https://travis-ci.org/npmdoc/node-npmdoc-odata-server)
+
 #### JayData Server
 
 [![NPM](https://nodei.co/npm/odata-server.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/odata-server)
